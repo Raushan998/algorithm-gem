@@ -1,58 +1,71 @@
-# frozen_string_literal: true
-
-require "rspec"
-require_relative "../../lib/algorithms/heap/min_heap"
+# spec/algorithms/heap/min_heap_spec.rb
+require 'algorithms/heap/min_heap'
 
 RSpec.describe Algorithms::Heap::MinHeap do
-  let(:min_heap) { described_class.new }
+  let(:heap) { described_class.new }
 
-  describe "#push" do
-    it "inserts an element and returns the correct size" do
-      min_heap.push(1)
-      expect(min_heap.size).to eq(1)
+  describe '#push' do
+    it 'adds elements and maintains heap property' do
+      heap.push(10)
+      expect(heap.top).to eq(10)
+
+      heap.push(5)
+      expect(heap.top).to eq(5)
+
+      heap.push(15)
+      expect(heap.top).to eq(5)
     end
   end
 
-  context "with multiple elements inserted" do
-    before do
-      min_heap.push(10)
-      min_heap.push(5)
-      min_heap.push(20)
-      min_heap.push(12)
-      min_heap.push(21)
-      min_heap.push(9)
+  describe '#pop' do
+    it 'removes the minimum element and maintains heap property' do
+      heap.push(10)
+      heap.push(5)
+      heap.push(15)
+
+      heap.pop
+      expect(heap.top).to eq(10)
+
+      heap.pop
+      expect(heap.top).to eq(15)
+
+      heap.pop
+      expect(heap.top).to be_nil
     end
 
-    describe "#top" do
-      it "returns the top minimum element" do
-        expect(min_heap.top).to eql(5)
-      end
-    end
-
-    describe "#pop" do
-      it "returns the new minimum after popping the top element" do
-        min_heap.pop
-        expect(min_heap.top).to eql(9)
-      end
+    it 'returns nil when the heap is empty' do
+      expect(heap.pop).to be_nil
     end
   end
 
-  describe "#size" do
-    it "returns the correct size of the heap" do
-      min_heap.push(10)
-      min_heap.push(5)
-      min_heap.push(20)
-      expect(min_heap.size).to eql(3)
+  describe '#top' do
+    it 'returns the minimum element or nil if empty' do
+      expect(heap.top).to be_nil
+
+      heap.push(20)
+      expect(heap.top).to eq(20)
+
+      heap.push(10)
+      expect(heap.top).to eq(10)
+
+      heap.pop
+      expect(heap.top).to eq(20)
     end
   end
 
-  describe "#push with existing elements" do
-    it "inserts a new element and returns the new minimum" do
-      min_heap.push(10)
-      min_heap.push(5)
-      min_heap.push(20)
-      min_heap.push(2)
-      expect(min_heap.top).to eql(2)
+  describe '#size' do
+    it 'returns the correct number of elements' do
+      expect(heap.size).to eq(0)
+
+      heap.push(10)
+      heap.push(5)
+      expect(heap.size).to eq(2)
+
+      heap.pop
+      expect(heap.size).to eq(1)
+
+      heap.pop
+      expect(heap.size).to eq(0)
     end
   end
 end

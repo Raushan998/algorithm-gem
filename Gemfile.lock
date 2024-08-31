@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    algorithms (0.1.0)
+    algorithms (1.1.2)
 
 GEM
   remote: https://rubygems.org/
