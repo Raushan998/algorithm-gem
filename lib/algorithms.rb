@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "algorithms/version"
-require_relative "algorithms/search/binary_search"
-require_relative "algorithms/heap/min_heap"
-require_relative "algorithms/heap/max_heap"
+require "require_all"
+require_all File.expand_path('algorithms', __dir__)
 module Algorithms
   class Error < StandardError; end
   
