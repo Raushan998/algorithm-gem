@@ -3,14 +3,16 @@
 
 The algorithms gem is a comprehensive Ruby library offering a range of essential data structures and algorithms. It includes efficient implementations of algorithms for sorting, searching, and graph traversal, as well as various data structures such as heaps, stacks, queues, and trees. This gem is ideal for developers who need ready-to-use, reliable tools for solving computational problems and optimizing their Ruby applications.
 
-#  █████╗  ██╗      █████╗  ██████╗  ██████╗  ██╗ ████████╗██╗███╗   ███╗███████╗███████╗
-# ██╔══██╗ ██║     ██╔══██╗██╔═══██╗ ██╔══██╗ ██║ ╚══██╔══╝██║████╗ ████║██╔════╝██╔════╝
-# ███████║ ██║     ███████║██║   ██║ ██████╔╝ ██║    ██║   ██║██╔████╔██║█████╗  ███████╗
-# ██╔══██║ ██║     ██╔══██║██║   ██║ ██╔═══╝  ██║    ██║   ██║██║╚██╔╝██║██╔══╝  ╚════██║
-# ██║  ██║ ███████╗██║  ██║╚██████╔╝ ██║      ██║    ██║   ██║██║ ╚═╝ ██║███████╗███████║
-# ╚═╝  ╚═╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝  ╚═╝      ╚═╝    ╚═╝   ╚═╝╚═╝     ╚═╝╚══════╝╚══════╝
-
-
+```markdown
+           _                  _ _   _                   
+     /\   | |                (_) | | |                  
+    /  \  | | __ _  ___  _ __ _| |_| |__  _ __ ___  ___ 
+   / /\ \ | |/ _` |/ _ \| '__| | __| '_ \| '_ ` _ \/ __|
+  / ____ \| | (_| | (_) | |  | | |_| | | | | | | | \__ \
+ /_/    \_\_|\__, |\___/|_|  |_|\__|_| |_|_| |_| |_|___/
+              __/ |                                     
+             |___/ 
+```
 ## Installation
 
 Please Clone this file to your local and we have not added this gem rubygems.org portal.
