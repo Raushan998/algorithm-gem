@@ -30,9 +30,8 @@ module Algorithms
       def size
         @arr.length
       end
-
+      
       private
-
       def shift_up
         _idx = @arr.length - 1
         while _idx.positive?
@@ -47,12 +46,18 @@ module Algorithms
 
       def shift_down
         current_index = 0
-        while current_index < @arr.size
+
+        while current_index < @arr.length
           left_child_index = 2 * current_index + 1
           right_child_index = 2 * current_index + 2
-          smallest_index = [current_index,
-                            left_child_index,
-                            right_child_index].select { |i| i < @arr.size }.min_by { |i| @arr[i] }
+          smallest_index = current_index
+
+          if left_child_index < @arr.length && @arr[left_child_index] < @arr[smallest_index]
+            smallest_index = left_child_index
+          end
+          if right_child_index < @arr.length && @arr[right_child_index] < @arr[smallest_index]
+            smallest_index = right_child_index
+          end
 
           break if smallest_index == current_index
 
