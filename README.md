@@ -83,6 +83,41 @@ heap.pop
 heap.size
 
 ```
+
+Stack
+
+```
+stack = Algorithms::Stack.new
+
+stack.push(10)
+stack.push(20)
+stack.push(30)
+stack.push(40)
+
+stack.top() => 40
+stack.pop() => removes the last element
+
+stack.top() => 30
+
+stack.empty? => false # stack is not empty
+```
+
+
+Queue
+```
+queue = Algorithms::Queue.new
+queue.push(10)
+queue.push(20)
+queue.push(30)
+queue.push(40)
+
+queue.front() => 10 # returns the top element of queueu
+queue.pop() => removes the first element of queue i.e; 10
+
+queue.front() => 20
+queue.empty? => returns false
+
+```
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/Raushan998/algorithms. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/Raushan998/algorithms/blob/master/CODE_OF_CONDUCT.md).
